@@ -1,0 +1,4 @@
+# Crypto Twitter Pipeline Dependencies
+requests>=2.31.0
+python-dotenv>=1.0.0
+x-twitter-scraper>=0.3.0

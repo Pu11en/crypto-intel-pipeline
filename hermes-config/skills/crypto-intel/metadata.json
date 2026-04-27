@@ -1,0 +1,100 @@
+{
+  "name": "crypto-intel",
+  "version": "1.0.0",
+  "description": "Crypto news intelligence for content creators",
+  "author": "Drew",
+  "category": "research",
+  "tags": ["crypto", "news", "twitter", "content-creation"],
+  "tools": [
+    {
+      "name": "get_daily_digest",
+      "description": "Get the latest AI-filtered crypto news digest",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "hours": {
+            "type": "integer",
+            "description": "Hours to look back (default: 24)",
+            "default": 24
+          },
+          "min_score": {
+            "type": "number",
+            "description": "Minimum AI score threshold (default: 7.0)",
+            "default": 7.0
+          }
+        }
+      }
+    },
+    {
+      "name": "search_news",
+      "description": "Search filtered tweets by category/topic",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "category": {
+            "type": "string",
+            "description": "Category: hack, launch, price, macro, alpha, defi, memecoin, tech, news",
+            "enum": ["hack", "launch", "price", "macro", "alpha", "defi", "memecoin", "tech", "news"]
+          },
+          "hours": {
+            "type": "integer",
+            "description": "Hours to look back",
+            "default": 24
+          }
+        }
+      }
+    },
+    {
+      "name": "get_trending",
+      "description": "Get trending crypto topics and alerts",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "platform": {
+            "type": "string",
+            "description": "Filter by platform: solana, ethereum, bitcoin, all",
+            "default": "all"
+          }
+        }
+      }
+    },
+    {
+      "name": "get_content_ideas",
+      "description": "Generate shortform video topics from today's news",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "count": {
+            "type": "integer",
+            "description": "Number of content ideas to generate",
+            "default": 5
+          },
+          "style": {
+            "type": "string",
+            "description": "Video style: informative, reaction, alpha, alert",
+            "default": "informative"
+          }
+        }
+      }
+    }
+  ],
+  "triggers": [
+    "crypto news",
+    "daily digest",
+    "what happened today",
+    "hacks today",
+    "trending",
+    "whale activity",
+    "solana news",
+    "alpha",
+    "content ideas",
+    "run pipeline",
+    "refresh news"
+  ],
+  "memory_keys": [
+    "preferred_platform",
+    "content_style",
+    "watched_accounts",
+    "hated_topics"
+  ]
+}
