@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crypto Content Creator</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #0a0a0f;
+            color: #fff;
+            min-height: 100vh;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            padding: 20px 30px;
+            border-bottom: 1px solid #2a2a4a;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .header h1 {
+            font-size: 20px;
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .refresh-badge {
+            background: #2a2a4a;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 12px;
+            color: #888;
+        }
+        
+        .tabs {
+            display: flex;
+            padding: 20px 30px;
+            gap: 10px;
+            overflow-x: auto;
+            background: #0a0a0f;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .tab {
+            padding: 10px 20px;
+            background: #1a1a2e;
+            border: 1px solid #2a2a4a;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.2s;
+            white-space: nowrap;
+            font-size: 14px;
+        }
+        
+        .tab:hover { background: #2a2a4a; }
+        .tab.active { background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); border: none; }
+        
+        .main { padding: 20px 30px; max-width: 800px; margin: 0 auto; }
+        
+        .content-pack {
+            margin-bottom: 40px;
+        }
+        
+        .content-pack h2 {
+            font-size: 16px;
+            color: #f093fb;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .video-card {
+            background: #1a1a2e;
+            border-radius: 16px;
+            padding: 24px;
+            margin-bottom: 20px;
+            border: 1px solid #2a2a4a;
+            transition: all 0.2s;
+        }
+        
+        .video-card:hover {
+            border-color: #f093fb;
+            transform: translateY(-2px);
+        }
+        
+        .video-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 16px;
+        }
+        
+        .video-rank {
+            font-size: 32px;
+            font-weight: bold;
+            color: #f093fb;
+        }
+        
+        .video-meta {
+            text-align: right;
+        }
+        
+        .video-score {
+            font-size: 24px;
+            font-weight: bold;
+            color: #4ade80;
+        }
+        
+        .video-category {
+            font-size: 12px;
+            padding: 4px 10px;
+            border-radius: 12px;
+            background: #2a2a4a;
+            color: #888;
+        }
+        
+        .category-hack { background: #ef4444; color: #fff; }
+        .category-whale { background: #10b981; color: #000; }
+        .category-bitcoin { background: #f7931a; color: #000; }
+        .category-solana { background: #9945FF; color: #fff; }
+        .category-defi { background: #3b82f6; color: #fff; }
+        .category-alpha { background: #8b5cf6; color: #fff; }
+        
+        .hook-box {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: #fff;
+            padding: 16px 20px;
+            border-radius: 12px;
+            margin-bottom: 16px;
+            font-size: 18px;
+            font-weight: 500;
+        }
+        
+        .hook-label {
+            font-size: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            opacity: 0.8;
+            margin-bottom: 8px;
+        }
+        
+        .context-box {
+            background: #0a0a0f;
+            padding: 16px;
+            border-radius: 10px;
+            margin-bottom: 16px;
+            color: #ccc;
+            font-size: 14px;
+        }
+        
+        .context-label {
+            font-size: 10px;
+            text-transform: uppercase;
+            color: #666;
+            margin-bottom: 8px;
+        }
+        
+        .tweet-text {
+            background: #0a0a0f;
+            padding: 16px;
+            border-radius: 10px;
+            margin-bottom: 16px;
+            font-size: 14px;
+            color: #888;
+            font-style: italic;
+        }
+        
+        .tweet-text::before { content: '"'; }
+        .tweet-text::after { content: '"'; }
+        
+        .actions {
+            display: flex;
+            gap: 12px;
+        }
+        
+        .btn {
+            flex: 1;
+            padding: 12px 16px;
+            border-radius: 8px;
+            border: none;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.2s;
+            text-decoration: none;
+            text-align: center;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: #fff;
+        }
+        
+        .btn-primary:hover { transform: scale(1.02); }
+        
+        .btn-secondary {
+            background: #2a2a4a;
+            color: #fff;
+        }
+        
+        .btn-secondary:hover { background: #3a3a5a; }
+        
+        .stats-bar {
+            display: flex;
+            gap: 20px;
+            padding: 16px 30px;
+            background: #1a1a2e;
+            border-bottom: 1px solid #2a2a4a;
+        }
+        
+        .stat {
+            text-align: center;
+        }
+        
+        .stat-value {
+            font-size: 24px;
+            font-weight: bold;
+            color: #f093fb;
+        }
+        
+        .stat-label {
+            font-size: 11px;
+            color: #666;
+            text-transform: uppercase;
+        }
+        
+        .footer-actions {
+            padding: 20px 30px;
+            display: flex;
+            gap: 10px;
+        }
+        
+        .loading {
+            text-align: center;
+            padding: 60px;
+            color: #666;
+        }
+        
+        @media (max-width: 600px) {
+            .header { padding: 15px; }
+            .tabs { padding: 15px; }
+            .main { padding: 15px; }
+            .video-card { padding: 16px; }
+            .video-rank { font-size: 24px; }
+            .stats-bar { padding: 15px; gap: 15px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>🎬 CRYPTO CONTENT CREATOR</h1>
+        <div class="refresh-badge" id="last-updated">Loading...</div>
+    </div>
+    
+    <div class="stats-bar">
+        <div class="stat">
+            <div class="stat-value" id="total-tweets">-</div>
+            <div class="stat-label">Tweets</div>
+        </div>
+        <div class="stat">
+            <div class="stat-value" id="total-accounts">-</div>
+            <div class="stat-label">Accounts</div>
+        </div>
+        <div class="stat">
+            <div class="stat-value" id="content-count">-</div>
+            <div class="stat-label">Videos Ready</div>
+        </div>
+    </div>
+    
+    <div class="tabs">
+        <div class="tab active" data-view="content">🎬 Content Pack</div>
+        <div class="tab" data-view="all">📊 All Tweets</div>
+        <div class="tab" data-view="whale">🐋 Whale</div>
+        <div class="tab" data-view="hack">🚨 Hacks</div>
+        <div class="tab" data-view="bitcoin">₿ Bitcoin</div>
+        <div class="tab" data-view="defi">💎 DeFi</div>
+    </div>
+    
+    <div class="main" id="main-content">
+        <div class="loading">Loading content pack...</div>
+    </div>
+    
+    <div class="footer-actions">
+        <button class="btn btn-primary" onclick="refreshContent()">🔄 Refresh</button>
+        <button class="btn btn-secondary" onclick="window.open('http://localhost:5000/api/content-pack', '_blank')">
+            📋 Export JSON
+        </button>
+    </div>
+    
+    <script>
+        let currentView = 'content';
+        
+        async function loadStats() {
+            try {
+                const res = await fetch('/api/stats');
+                const data = await res.json();
+                document.getElementById('total-tweets').textContent = data.total_tweets;
+                document.getElementById('total-accounts').textContent = data.total_accounts;
+            } catch (e) {
+                console.error('Stats error:', e);
+            }
+        }
+        
+        async function loadContentPack() {
+            const main = document.getElementById('main-content');
+            main.innerHTML = '<div class="loading">Loading content pack...</div>';
+            
+            try {
+                const res = await fetch('/api/content-pack');
+                const data = await res.json();
+                
+                document.getElementById('last-updated').textContent = data.generated_at;
+                document.getElementById('content-count').textContent = data.count;
+                
+                if (data.content.length === 0) {
+                    main.innerHTML = '<div class="loading">No content scored yet. Run the pipeline first.</div>';
+                    return;
+                }
+                
+                main.innerHTML = '<div class="content-pack"><h2>🎬 READY TO RECORD</h2>' + 
+                    data.content.map(item => renderVideoCard(item)).join('') + 
+                    '</div>';
+                    
+            } catch (e) {
+                main.innerHTML = '<div class="loading">Error loading content: ' + e.message + '</div>';
+            }
+        }
+        
+        function renderVideoCard(item) {
+            const catClass = 'category-' + item.category.toLowerCase();
+            
+            return `
+                <div class="video-card">
+                    <div class="video-header">
+                        <div class="video-rank">#${item.rank}</div>
+                        <div class="video-meta">
+                            <div class="video-score">${item.score}/10</div>
+                            <span class="video-category ${catClass}">${item.category}</span>
+                        </div>
+                    </div>
+                    
+                    <div class="hook-box">
+                        <div class="hook-label">🎤 HOOK (Say This First)</div>
+                        ${item.hook}
+                    </div>
+                    
+                    <div class="context-box">
+                        <div class="context-label">📝 WHAT TO SAY</div>
+                        ${item.context}
+                    </div>
+                    
+                    <div class="tweet-text">
+                        ${item.text}
+                    </div>
+                    
+                    <div class="context-box" style="background: transparent; padding: 8px 0;">
+                        <span style="color: #f093fb; font-size: 12px;">📣 ENDING: </span>
+                        <span style="color: #888; font-size: 14px;">${item.cta}</span>
+                    </div>
+                    
+                    <div class="actions">
+                        <button class="btn btn-primary" onclick="window.open('${item.url}', '_blank')">
+                            👁️ View Tweet
+                        </button>
+                        <button class="btn btn-secondary" onclick="copyToClipboard('${item.hook.replace(/"/g, '\\"')}\\n\\n${item.context}')">
+                            📋 Copy Script
+                        </button>
+                    </div>
+                </div>
+            `;
+        }
+        
+        function copyToClipboard(text) {
+            navigator.clipboard.writeText(text.replace(/<[^>]*>/g, '')).then(() => {
+                alert('Copied to clipboard!');
+            });
+        }
+        
+        function refreshContent() {
+            loadContentPack();
+            loadStats();
+        }
+        
+        // Tab switching
+        document.querySelectorAll('.tab').forEach(tab => {
+            tab.addEventListener('click', () => {
+                document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+                tab.classList.add('active');
+                currentView = tab.dataset.view;
+                
+                if (currentView === 'content') {
+                    loadContentPack();
+                } else {
+                    loadCategory(currentView);
+                }
+            });
+        });
+        
+        async function loadCategory(cat) {
+            const main = document.getElementById('main-content');
+            main.innerHTML = '<div class="loading">Loading...</div>';
+            
+            try {
+                const res = await fetch('/api/category/' + cat);
+                const data = await res.json();
+                
+                if (data.tweets.length === 0) {
+                    main.innerHTML = '<div class="loading">No ' + cat + ' content found.</div>';
+                    return;
+                }
+                
+                main.innerHTML = data.tweets.map(tweet => `
+                    <div class="video-card">
+                        <div class="context-box">
+                            <div class="context-label">@${tweet.username}</div>
+                            ${tweet.text.substring(0, 200)}...
+                        </div>
+                        <div class="actions">
+                            <a href="https://x.com/${tweet.username}/status/${tweet.id}" target="_blank" class="btn btn-primary">
+                                View Tweet
+                            </a>
+                        </div>
+                    </div>
+                `).join('');
+                
+            } catch (e) {
+                main.innerHTML = '<div class="loading">Error: ' + e.message + '</div>';
+            }
+        }
+        
+        // Initial load
+        loadStats();
+        loadContentPack();
+    </script>
+</body>
+</html>

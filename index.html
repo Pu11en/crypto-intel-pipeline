@@ -45,134 +45,7 @@
             margin-top: 15px;
         }
         
-        .main { padding: 30px; max-width: 900px; margin: 0 auto; }
-        
-        .section-title {
-            font-size: 18px;
-            color: #f093fb;
-            margin-bottom: 20px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-        
-        .video-card {
-            background: #1a1a2e;
-            border-radius: 16px;
-            padding: 24px;
-            margin-bottom: 20px;
-            border: 1px solid #2a2a4a;
-        }
-        
-        .video-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            margin-bottom: 16px;
-        }
-        
-        .video-rank {
-            font-size: 36px;
-            font-weight: bold;
-            color: #f093fb;
-        }
-        
-        .video-meta {
-            text-align: right;
-        }
-        
-        .video-score {
-            font-size: 24px;
-            font-weight: bold;
-            color: #4ade80;
-        }
-        
-        .video-category {
-            font-size: 12px;
-            padding: 4px 10px;
-            border-radius: 12px;
-            background: #2a2a4a;
-            color: #888;
-            display: inline-block;
-            margin-top: 5px;
-        }
-        
-        .category-bitcoin { background: #f7931a; color: #000; }
-        .category-solana { background: #9945FF; color: #fff; }
-        .category-defi { background: #3b82f6; color: #fff; }
-        .category-alpha { background: #8b5cf6; color: #fff; }
-        .category-other { background: #6b7280; color: #fff; }
-        
-        .hook-box {
-            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-            color: #fff;
-            padding: 20px;
-            border-radius: 12px;
-            margin-bottom: 16px;
-            font-size: 18px;
-            font-weight: 500;
-        }
-        
-        .label {
-            font-size: 10px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            opacity: 0.8;
-            margin-bottom: 8px;
-        }
-        
-        .context-box {
-            background: #0a0a0f;
-            padding: 16px;
-            border-radius: 10px;
-            margin-bottom: 16px;
-            color: #ccc;
-            font-size: 14px;
-        }
-        
-        .tweet-text {
-            background: #0a0a0f;
-            padding: 16px;
-            border-radius: 10px;
-            margin-bottom: 16px;
-            font-size: 14px;
-            color: #888;
-        }
-        
-        .actions {
-            display: flex;
-            gap: 12px;
-        }
-        
-        .btn {
-            flex: 1;
-            padding: 12px 16px;
-            border-radius: 8px;
-            border: none;
-            font-weight: bold;
-            cursor: pointer;
-            transition: all 0.2s;
-            text-decoration: none;
-            text-align: center;
-            font-size: 14px;
-        }
-        
-        .btn-primary {
-            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-            color: #fff;
-        }
-        
-        .btn-secondary {
-            background: #2a2a4a;
-            color: #fff;
-        }
-        
-        .footer {
-            text-align: center;
-            padding: 40px;
-            color: #666;
-            font-size: 12px;
-        }
+        .main { padding: 30px; max-width: 1200px; margin: 0 auto; }
         
         .stats {
             display: flex;
@@ -199,6 +72,148 @@
             color: #666;
             text-transform: uppercase;
         }
+        
+        .tabs {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .tab {
+            padding: 10px 20px;
+            background: #1a1a2e;
+            border: 1px solid #2a2a4a;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.2s;
+            font-size: 14px;
+        }
+        
+        .tab:hover { background: #2a2a4a; }
+        .tab.active { background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); border: none; }
+        
+        .section-title {
+            font-size: 18px;
+            color: #f093fb;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .tweet-card {
+            background: #1a1a2e;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 15px;
+            border: 1px solid #2a2a4a;
+            display: flex;
+            gap: 15px;
+        }
+        
+        .tweet-rank {
+            font-size: 20px;
+            font-weight: bold;
+            color: #f093fb;
+            min-width: 40px;
+        }
+        
+        .tweet-content { flex: 1; }
+        
+        .tweet-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        
+        .tweet-user {
+            color: #f093fb;
+            font-weight: bold;
+        }
+        
+        .tweet-meta {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+        
+        .tweet-score {
+            background: #2a2a4a;
+            padding: 4px 10px;
+            border-radius: 6px;
+            font-size: 12px;
+            color: #4ade80;
+        }
+        
+        .tweet-category {
+            font-size: 11px;
+            padding: 3px 8px;
+            border-radius: 4px;
+            text-transform: uppercase;
+        }
+        
+        .category-bitcoin { background: #f7931a; color: #000; }
+        .category-solana { background: #9945FF; color: #fff; }
+        .category-defi { background: #3b82f6; color: #fff; }
+        .category-alpha { background: #8b5cf6; color: #fff; }
+        .category-whale { background: #10b981; color: #000; }
+        .category-other { background: #6b7280; color: #fff; }
+        
+        .tweet-text {
+            color: #ccc;
+            font-size: 14px;
+            line-height: 1.5;
+            margin-bottom: 10px;
+        }
+        
+        .tweet-time {
+            color: #666;
+            font-size: 12px;
+        }
+        
+        .tweet-actions {
+            display: flex;
+            gap: 10px;
+            margin-top: 10px;
+        }
+        
+        .btn {
+            padding: 8px 16px;
+            border-radius: 6px;
+            border: none;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.2s;
+            text-decoration: none;
+            font-size: 13px;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: #fff;
+        }
+        
+        .btn-secondary {
+            background: #2a2a4a;
+            color: #fff;
+        }
+        
+        .footer {
+            text-align: center;
+            padding: 40px;
+            color: #666;
+            font-size: 12px;
+        }
+        
+        @media (max-width: 600px) {
+            .tweet-card { flex-direction: column; }
+            .tweet-rank { text-align: left; }
+            .stats { gap: 20px; }
+        }
     </style>
 </head>
 <body>
@@ -211,7 +226,7 @@
     <div class="main">
         <div class="stats">
             <div class="stat">
-                <div class="stat-value">169</div>
+                <div class="stat-value" id="total-tweets">186</div>
                 <div class="stat-label">Tweets Scraped</div>
             </div>
             <div class="stat">
@@ -219,164 +234,78 @@
                 <div class="stat-label">Accounts</div>
             </div>
             <div class="stat">
-                <div class="stat-value">10</div>
-                <div class="stat-label">Videos Ready</div>
+                <div class="stat-value">186</div>
+                <div class="stat-label">Showing</div>
             </div>
         </div>
         
-        <div class="section-title">🎬 READY TO RECORD</div>
+        <div class="tabs">
+            <div class="tab active" data-filter="all">All (186)</div>
+            <div class="tab" data-filter="bitcoin">Bitcoin</div>
+            <div class="tab" data-filter="solana">Solana</div>
+            <div class="tab" data-filter="defi">DeFi</div>
+            <div class="tab" data-filter="alpha">Alpha</div>
+            <div class="tab" data-filter="whale">Whale</div>
+        </div>
         
-        <div id="content"></div>
+        <div class="section-title">📊 ALL SCRAPED TWEETS</div>
+        
+        <div id="tweets"></div>
     </div>
     
     <div class="footer">
-        Crypto Intel Pipeline • Built with Xquik + AI
+        Crypto Intel Pipeline • Built with Xquik + AI • 48-Hour Fresh Data
     </div>
     
     <script>
-        const tweets = [
-            {
-                "rank": 1,
-                "score": 9.0,
-                "category": "bitcoin",
-                "hook": "₿ Bitcoin is making headlines again...",
-                "context": "@coingecko reporting: $255M involved in latest purchase",
-                "text": "JUST IN: Strategy purchases another 3,273 Bitcoin for ~$255M, bringing its total holdings to 818,334 $BTC. Are you bullish on Bitcoin?",
-                "username": "coingecko",
-                "url": "https://x.com/coingecko/status/2048737784253280453"
-            },
-            {
-                "rank": 2,
-                "score": 8.5,
-                "category": "bitcoin",
-                "hook": "₿ Bitcoin is making headlines again...",
-                "context": "@BitcoinMagazine with breaking news",
-                "text": "JUST IN: 🇺🇸 SEC Chair Paul Atkins urges congress to advance the Bitcoin & crypto market structure legislation \"We really need to have congress speak to this area. We're ready, willing, and able\"",
-                "username": "BitcoinMagazine",
-                "url": "https://x.com/BitcoinMagazine/status/2048852695445111152"
-            },
-            {
-                "rank": 3,
-                "score": 8.5,
-                "category": "alpha",
-                "hook": "🎯 Alpha drop - pay attention to this...",
-                "context": "@Tradermayne with trading insight",
-                "text": "Interesting to see how many people are dunking on this guy. Just a month or two ago everyone was praising him like a god for calling the top. They want the coin to go up, he's bearish so they get mad, typical.",
-                "username": "Tradermayne",
-                "url": "https://x.com/Tradermayne/status/2048556192054833259"
-            },
-            {
-                "rank": 4,
-                "score": 8.0,
-                "category": "bitcoin",
-                "hook": "₿ Bitcoin is making headlines again...",
-                "context": "@BitcoinMagazine announces something big",
-                "text": "JUST IN: Bitcoin Magazine announces the launch of 'BM TV', an institutional grade live show dedicated to covering Bitcoin, macroeconomics, geopolitics, and more! 🚀",
-                "username": "BitcoinMagazine",
-                "url": "https://x.com/BitcoinMagazine/status/2048821202446319828"
-            },
-            {
-                "rank": 5,
-                "score": 8.0,
-                "category": "solana",
-                "hook": "◎ Something big is happening on Solana...",
-                "context": "@SolanaFloor reporting: $8M raise",
-                "text": "News: @Solana_Company Signals Return to $SOL Accumulation With $8M Raise",
-                "username": "SolanaFloor",
-                "url": "https://x.com/SolanaFloor/status/2048872359847968965"
-            },
-            {
-                "rank": 6,
-                "score": 8.0,
-                "category": "defi",
-                "hook": "💎 DeFi update you need to know about...",
-                "context": "@coingecko reporting something important",
-                "text": "Top 10 DeFi United Contributors: 1. @Arbitrum – 30765 ETH 2. @Mantle_Official – 30000 ETH 3. @Aave – 25000 ETH ... Will you be contributing to the relief fund?",
-                "username": "coingecko",
-                "url": "https://x.com/coingecko/status/2048715147641032842"
-            },
-            {
-                "rank": 7,
-                "score": 8.0,
-                "category": "bitcoin",
-                "hook": "₿ Bitcoin is making headlines again...",
-                "context": "@rektcapital with technical analysis",
-                "text": "#BTC Bitcoin has Weekly Closed just above the 21-week EMA (green). Which means price is technically positioned for a retest of the EMA. The problem is that there is very little space for the retest to breathe.",
-                "username": "rektcapital",
-                "url": "https://x.com/rektcapital/status/2048836623488741440"
-            },
-            {
-                "rank": 8,
-                "score": 8.0,
-                "category": "bitcoin",
-                "hook": "₿ Bitcoin is making headlines again...",
-                "context": "@rektcapital with breaking news",
-                "text": "Just in case you missed it... I published an Altcoin Newsletter this past Friday. The following Altcoins were covered: $VET $TIA $PYTH $ONDO $PEPE $ZEC",
-                "username": "rektcapital",
-                "url": "https://x.com/rektcapital/status/2048773466459910583"
-            },
-            {
-                "rank": 9,
-                "score": 7.5,
-                "category": "other",
-                "hook": "📊 This crypto story is flying under the radar...",
-                "context": "@BitcoinMagazine with breaking news",
-                "text": "JUST IN: 🇺🇸 US Senator Cynthia Lummis announces Bitcoin and crypto market structure legislation will get marked up \"in May.\" \"We are gonna get it to the finish line.\" 🚀",
-                "username": "BitcoinMagazine",
-                "url": "https://x.com/BitcoinMagazine/status/2048835376849301656"
-            },
-            {
-                "rank": 10,
-                "score": 7.5,
-                "category": "solana",
-                "hook": "◎ Something big is happening on Solana...",
-                "context": "@SolanaFloor with breaking news",
-                "text": "News: $BNSOL Claims Solana's LST Crown Amidst DeFi Deposit Flight",
-                "username": "SolanaFloor",
-                "url": "https://x.com/SolanaFloor/status/2048844380421890378"
-            }
-        ];
+        const ALL_TWEETS = [{"id": "2048737784253280453", "username": "coingecko", "text": "JUST IN: Strategy purchases another 3,273 Bitcoin for ~$255M, bringing its total holdings to 818,334 $BTC.\n\nAre you bullish on Bitcoin? https://t.co/5DhTv3NyOT", "created_at": "Mon Apr 27 12:15:26 +0000 2026", "score": 9.0, "category": "bitcoin", "hook": "bitcoin signal", "url": "https://x.com/coingecko/status/2048737784253280453"}, {"id": "2048556192054833259", "username": "Tradermayne", "text": "Interesting to see how many people are dunking on this guy. \n\nJust a month or two ago everyone was praising him like a god for calling the top. \n\nThey want the coin to go up, he's bearish so they get mad, typical.\n\nJust take the other side of the trade bro.", "created_at": "Mon Apr 27 00:13:51 +0000 2026", "score": 8.5, "category": "alpha", "hook": "alpha signal", "url": "https://x.com/Tradermayne/status/2048556192054833259"}, {"id": "2048902811484852669", "username": "BitcoinMagazine", "text": "JUST IN: Michael Saylor says Bitcoin is getting ready for a \"massive supply shock\" 🚀\n\nBullish! 🐂 https://t.co/zgpXl7WTXq", "created_at": "Mon Apr 27 23:11:11 +0000 2026", "score": 8.0, "category": "bitcoin", "hook": "bitcoin signal", "url": "https://x.com/BitcoinMagazine/status/2048902811484852669"}, {"id": "2048872359847968965", "username": "SolanaFloor", "text": "News: @Solana_Company Signals Return to $SOL Accumulation With $8M Raise\n\n✍️ @ideyquickvex \n\nhttps://t.co/DTgzOt063f", "created_at": "Mon Apr 27 21:10:11 +0000 2026", "score": 8.0, "category": "solana", "hook": "solana signal", "url": "https://x.com/SolanaFloor/status/2048872359847968965"}, {"id": "2048836623488741440", "username": "rektcapital", "text": "#BTC \n\nBitcoin has Weekly Closed just above the 21-week EMA (green)\n\nWhich means price is technically positioned for a retest of the EMA\n\nThe problem is that there is very little space for the retest to breathe, making it very easy for BTC to drop below the EMA\n\nBitcoin will need to try to hang at these highs if the retest is to be successful\n\n$BTC #Crypto #Bitcoin", "created_at": "Mon Apr 27 18:48:11 +0000 2026", "score": 8.0, "category": "bitcoin", "hook": "bitcoin signal", "url": "https://x.com/rektcapital/status/2048836623488741440"}, {"id": "2048773466459910583", "username": "rektcapital", "text": "Just in case you missed it...\n\nI published an Altcoin Newsletter this past Friday\n\nThe following Altcoins were covered: $VET $TIA $PYTH $ONDO $PEPE $ZEC\n\nI share an Altcoin Newsletter like this every Friday\n\nSign up & read here:\n\nhttps://t.co/EbOr2t4jLk\n\n#BTC #Crypto #Bitcoin", "created_at": "Mon Apr 27 14:37:13 +0000 2026", "score": 8.0, "category": "bitcoin", "hook": "bitcoin signal", "url": "https://x.com/rektcapital/status/2048773466459910583"}, {"id": "2048715147641032842", "username": "coingecko", "text": "Top 10 DeFi United Contributors\n\n1. @Arbitrum – 30765 ETH (Pending)\n2. @Mantle_Official – 30000 ETH (Pending)\n3. @Aave – 25000 ETH (Pending)\n4. @StaniKulechov – 5000 ETH\n5. @Ether_fi – 5000 ETH (Pending)\n6. @LidoFinance – 2500 ETH (Pending)\n7. @KelpDAO – 2000 ETH\n8. @GolemFoundation + @Golemproject – 1000 ETH\n9. @The3D_ – 500 ETH\n10. @bgdlabs + @eboadom – 350 ETH\n\nWill you be contributing to the relief fund?", "created_at": "Mon Apr 27 10:45:29 +0000 2026", "score": 8.0, "category": "defi", "hook": "defi signal", "url": "https://x.com/coingecko/status/2048715147641032842"}, {"id": "2048921836491075632", "username": "DefiLlama", "text": "Over $1 Trillion of stablecoins have been transferred so far this month.\n\nYou can now track stablecoin volume by chain, token, and currency on the DefiLlama stablecoin dashboard. https://t.co/GzYW1B2U63", "created_at": "Tue Apr 28 00:26:47 +0000 2026", "score": 7.5, "category": "whale", "hook": "whale signal", "url": "https://x.com/DefiLlama/status/2048921836491075632"}, {"id": "2048840423142257141", "username": "SolanaFloor", "text": "NEW: @Circle minted another ~$500 million $USDC on @Solana over the last 5 hours. https://t.co/LZPDwjpPlJ", "created_at": "Mon Apr 27 19:03:17 +0000 2026", "score": 7.5, "category": "whale", "hook": "whale signal", "url": "https://x.com/SolanaFloor/status/2048840423142257141"}, {"id": "2048844380421890378", "username": "SolanaFloor", "text": "News: $BNSOL Claims Solana's LST Crown Amidst DeFi Deposit Flight\n\n✍️ @solace_fm \nhttps://t.co/pb53TPl6Dd", "created_at": "Mon Apr 27 19:19:00 +0000 2026", "score": 7.5, "category": "solana", "hook": "solana signal", "url": "https://x.com/SolanaFloor/status/2048844380421890378"}, {"id": "2048917596897247527", "username": "BitcoinMagazine", "text": "JUST IN: Billionaire Tim Draper says it's now irresponsible for companies to not hold bitcoin.\n\n\"Because when Silicon Valley Bank went out of business, we almost saw the domino effect, we almost lost all the banks.\" 👀 https://t.co/BScChxFZEC", "created_at": "Tue Apr 28 00:09:56 +0000 2026", "score": 7.0, "category": "bitcoin", "hook": "bitcoin signal", "url": "https://x.com/BitcoinMagazine/status/2048917596897247527"}, {"id": "2048836123552530875", "username": "rektcapital", "text": "New edition of the RC Newsletter is out!\n\nThe Bitcoin Relief Rally - How Much More Upside Is Left?\n\nWhat are the key resistances ahead?\n\nSign up here:\n\nhttps://t.co/k07rtOCxT4\n\n#BTC #Crypto #Bitcoin", "created_at": "Mon Apr 27 18:46:12 +0000 2026", "score": 7.0, "category": "bitcoin", "hook": "bitcoin signal", "url": "https://x.com/rektcapital/status/2048836123552530875"}, {"id": "2048755148361707946", "username": "sama", "text": "we have updated our partnership with microsoft.\n\nmicrosoft will remain our primary cloud partner, but we are now able to make our products and services available across all clouds.\n\nwill continue to provide them with models and products until 2032, and a revenue share through 2030.", "created_at": "Mon Apr 27 13:24:26 +0000 2026", "score": 7.0, "category": "other", "hook": "other update", "url": "https://x.com/sama/status/2048755148361707946"}, {"id": "2048750042345869583", "username": "coingecko", "text": "JUST IN: BitMine Immersion purchases another 101,627 Ethereum 🟢 https://t.co/XE9phieFr5", "created_at": "Mon Apr 27 13:04:08 +0000 2026", "score": 7.0, "category": "other", "hook": "other update", "url": "https://x.com/coingecko/status/2048750042345869583"}, {"id": "2048717125125341693", "username": "coingecko", "text": "Fun Fact: The total NFT market cap just hit $2B for the first time since January 2026 as @pudgypenguins and @BoredApeYC rally over the past week. https://t.co/BkLDifbCj3", "created_at": "Mon Apr 27 10:53:20 +0000 2026", "score": 7.0, "category": "other", "hook": "Price signal", "url": "https://x.com/coingecko/status/2048717125125341693"}, {"id": "2048678865074016308", "username": "coingecko", "text": "INSIGHT: $XCN pumps 41.9% after being listed on Upbit. https://t.co/KREw0Py3Se", "created_at": "Mon Apr 27 08:21:18 +0000 2026", "score": 7.0, "category": "other", "hook": "Price signal", "url": "https://x.com/coingecko/status/2048678865074016308"}, {"id": "2048662753309564981", "username": "coingecko", "text": "JUST IN: $PRL surges 57.6% today after being listed on Upbit. https://t.co/6nZvMAgUrl", "created_at": "Mon Apr 27 07:17:17 +0000 2026", "score": 7.0, "category": "other", "hook": "Price signal", "url": "https://x.com/coingecko/status/2048662753309564981"}, {"id": "2048859403068363128", "username": "SolanaFloor", "text": "NEW: Squad @multisig protocol launches three new open-source @Solana multisig tools, multisig-cli, multisig-verifier, and multisig-monitor, to improve security by helping users safely review, verify, and monitor multisig transactions. https://t.co/nxx8VfgtU0", "created_at": "Mon Apr 27 20:18:42 +0000 2026", "score": 7.0, "category": "solana", "hook": "solana signal", "url": "https://x.com/SolanaFloor/status/2048859403068363128"}, {"id": "2048768297353502782", "username": "SolanaFloor", "text": "NEW: @SolanaFndn to host an exclusive Accelerate Miami event on May 4 for top CEX/DEX traders, funds, and allocators, featuring drinks and keynotes on onchain market structure and pre-IPO asset pricing. https://t.co/zZ0vYfafso", "created_at": "Mon Apr 27 14:16:41 +0000 2026", "score": 7.0, "category": "solana", "hook": "solana signal", "url": "https://x.com/SolanaFloor/status/2048768297353502782"}, {"id": "2048774252585984234", "username": "SolanaFloor", "text": "New: Solana Posts $31.8M Inflows as Bitcoin Hits $79K After Market Rebound\n\n✍️ @ideyquickvex \nhttps://t.co/FqVAG0YjjG", "created_at": "Mon Apr 27 14:40:20 +0000 2026", "score": 7.0, "category": "solana", "hook": "solana signal", "url": "https://x.com/SolanaFloor/status/2048774252585984234"}, {"id": "2048826853901635900", "username": "coingecko", "text": "Total crypto market cap falls 1.8% as Bitcoin dips below $77,000 🔴 https://t.co/7QTSFLFCYl", "created_at": "Mon Apr 27 18:09:21 +0000 2026", "score": 7.0, "category": "other", "hook": "Price signal", "url": "https://x.com/coingecko/status/2048826853901635900"}, {"id": "2048534721848848454", "username": "Tradermayne", "text": "Going to be live with @buyerofponzi shortly for another episode of the Crypto Closeout. \n\nhttps://t.co/PiFEHb89Os", "created_at": "Sun Apr 26 22:48:32 +0000 2026", "score": 7.0, "category": "alpha", "hook": "alpha signal", "url": "https://x.com/Tradermayne/status/2048534721848848454"}, {"id": "2048597828872630766", "username": "coingecko", "text": "Bullish start for the week.\n\nBitcoin $80,000 soon? https://t.co/fGg5uK36YA", "created_at": "Mon Apr 27 02:59:18 +0000 2026", "score": 7.5, "category": "other", "hook": "Price signal", "url": "https://x.com/coingecko/status/2048597828872630766"}, {"id": "2048913887614115857", "username": "sama", "text": "codex with the $20 plan is a really good deal", "created_at": "Mon Apr 27 23:55:12 +0000 2026", "score": 7.5, "category": "other", "hook": "other update", "url": "https://x.com/sama/status/2048913887614115857"}, {"id": "2048877755245486153", "username": "BitcoinMagazine", "text": "JUST IN: 🇺🇸 White House Executive Director says there will be a \"big announcmentvin the next few\" weeks regarding a Strategic Bitcoin Reserve 👀 https://t.co/ZmCOfxuJaD", "created_at": "Mon Apr 27 21:31:37 +0000 2026", "score": 7.5, "category": "bitcoin", "hook": "bitcoin signal", "url": "https://x.com/BitcoinMagazine/status/2048877755245486153"}, {"id": "2048821257534111863", "username": "DavidSacks", "text": "Cole Allen didn't need to go down a fringe rabbit hole to become radicalized. He just needed to believe the MSM's inflammatory rhetoric, lies, and hoaxes about Trump.", "created_at": "Mon Apr 27 17:47:07 +0000 2026", "score": 7.5, "category": "other", "hook": "other update", "url": "https://x.com/DavidSacks/status/2048821257534111863"}, {"id": "2048426122854228141", "username": "sama", "text": "\"post-AGI, no one is going to work and the economy is going to collapse\"\n\n\"i am switching to polyphasic sleep because GPT-5.5 in codex is so good that i can't afford to be sleeping for such long stretches and miss out on working\"", "created_at": "Sun Apr 26 15:37:00 +0000 2026", "score": 7.5, "category": "other", "hook": "other update", "url": "https://x.com/sama/status/2048426122854228141"}, {"id": "2048553739062071723", "username": "coingecko", "text": "Never in a million years would I have imagined this 🤯 https://t.co/RNjQt2HoJY", "created_at": "Mon Apr 27 00:04:06 +0000 2026", "score": 7.0, "category": "other", "hook": "other update", "url": "https://x.com/coingecko/status/2048553739062071723"}, {"id": "2048779371838853445", "username": "SolanaFloor", "text": "🎥 Are the risks in DeFi still worth the rewards?\n\nRecent attacks have proven that even \"safe\" low yield vaults are more vulnerable than we though, and we need to re-underwrite that risk👇 https://t.co/MLzzC5NVvt", "created_at": "Mon Apr 27 15:00:41 +0000 2026", "score": 6.5, "category": "defi", "hook": "defi signal", "url": "https://x.com/SolanaFloor/status/2048779371838853445"}, {"id": "2048855006498156916", "username": "SolanaFloor", "text": "🎥 Why is @ethereum suddenly getting the memecoin runners that used to belong to @solana?\n\nHave platforms like @Pumpfun shaped a PVP culture focused on the short term or has liquidity dried up👇 https://t.co/8oKeaG1nBY", "created_at": "Mon Apr 27 20:01:14 +0000 2026", "score": 6.5, "category": "solana", "hook": "solana signal", "url": "https://x.com/SolanaFloor/status/2048855006498156916"}, {"id": "2048856595569029563", "username": "SolanaFloor", "text": "New: @Solana Foundation Delegation Program's share of network stake has fallen by more than 50% over the past year, dropping from 11% to 5%.\n\nSFDP supported validators fell 59%, compared with an 8% decline among non SFDP validators. https://t.co/XRhlqjO8eJ", "created_at": "Mon Apr 27 20:07:32 +0000 2026", "score": 6.5, "category": "solana", "hook": "solana signal", "url": "https://x.com/SolanaFloor/status/2048856595569029563"}, {"id": "2048846980777206182", "username": "Tradermayne", "text": "bitcoin:native \n\nMonthly close in a few days. \n\nWhat do we think fellas? https://t.co/trxbcETror", "created_at": "Mon Apr 27 19:29:20 +0000 2026", "score": 6.5, "category": "bitcoin", "hook": "bitcoin signal", "url": "https://x.com/Tradermayne/status/2048846980777206182"}, {"id": "2048827305133560257", "username": "SolanaFloor", "text": "📊REPORT: Over $70 million worth of assets bridged from other chains to @solana in the last 7 days. https://t.co/3nnQhDkvtX", "created_at": "Mon Apr 27 18:11:09 +0000 2026", "score": 6.5, "category": "solana", "hook": "solana signal", "url": "https://x.com/SolanaFloor/status/2048827305133560257"}, {"id": "2048783825191289052", "username": "SolanaFloor", "text": "📈REPORT: @Solana continues to surpass all other chains combined in tokenized stock trading volume for the 47th consecutive week. https://t.co/DlitM2khkj", "created_at": "Mon Apr 27 15:18:23 +0000 2026", "score": 6.5, "category": "solana", "hook": "solana signal", "url": "https://x.com/SolanaFloor/status/2048783825191289052"}, {"id": "2048783647227179113", "username": "SolanaFloor", "text": "JUST IN: @anza_xyz and @jump_firedancer say Falcon has emerged as the preferred post quantum signature scheme for @Solana's long term quantum readiness, with both teams building initial implementations while noting that quantum risk remains years away and no change is needed today.", "created_at": "Mon Apr 27 15:17:40 +0000 2026", "score": 6.5, "category": "solana", "hook": "solana signal", "url": "https://x.com/SolanaFloor/status/2048783647227179113"}, {"id": "2048771729187631469", "username": "coingecko", "text": "Does war cause Bitcoin to pump or dump?\n\nIn this article, we explore how geopolitical conflict influences Bitcoin's performance and what history reveals about its role as an asset in times of global uncertainty.\n\nWatch the full video: https://t.co/rmDP07exCt https://t.co/SBX7Lo4HBM", "created_at": "Mon Apr 27 14:30:19 +0000 2026", "score": 6.5, "category": "bitcoin", "hook": "bitcoin signal", "url": "https://x.com/coingecko/status/2048771729187631469"}, {"id": "2048799131607634107", "username": "Tradermayne", "text": "RT @OrderBookShow: Loma dissects the difference between a buyable dip and a disaster on $BTC.\n\n\"If it's off a signal of a really large DeFi liquidation cascade, that's when you want to be buying.\"", "created_at": "Mon Apr 27 16:19:12 +0000 2026", "score": 6.5, "category": "bitcoin", "hook": "bitcoin signal", "url": "https://x.com/Tradermayne/status/2048799131607634107"}, {"id": "2048811495224390105", "username": "DavidSacks", "text": "Concerning. As I've said many times before, the biggest risk of AI isn't James Cameron's The Terminator, it's George Orwell's 1984.", "created_at": "Mon Apr 27 17:08:20 +0000 2026", "score": 6.5, "category": "other", "hook": "other update", "url": "https://x.com/DavidSacks/status/2048811495224390105"}, {"id": "2048813311668486300", "username": "DavidSacks", "text": "The problem with most of the \"AI Safety\" crowd is that their solutions always favor more government centralization and control. In other words, they will bring about the Orwellian future they claim to oppose. From last year:\n https://t.co/RFFunoH3Qv", "created_at": "Mon Apr 27 17:15:33 +0000 2026", "score": 6.5, "category": "other", "hook": "other update", "url": "https://x.com/DavidSacks/status/2048813311668486300"}, {"id": "2048854213904794111", "username": "SolanaFloor", "text": "NEW: @ZetaChain has reportedly been exploited, with at least $300K drained so far. https://t.co/KcAaB1iOqD", "created_at": "Mon Apr 27 19:58:05 +0000 2026", "score": 6.5, "category": "hack", "hook": "hack alert", "url": "https://x.com/SolanaFloor/status/2048854213904794111"}, {"id": "2048629095454634135", "username": "Tradermayne", "text": "Ya fuck you dude.", "created_at": "Mon Apr 27 05:03:32 +0000 2026", "score": 6.5, "category": "other", "hook": "other update", "url": "https://x.com/Tradermayne/status/2048629095454634135"}, {"id": "2048626518683959649", "username": "coingecko", "text": "Bro is taking over my job", "created_at": "Mon Apr 27 04:53:18 +0000 2026", "score": 6.5, "category": "other", "hook": "other update", "url": "https://x.com/coingecko/status/2048626518683959649"}, {"id": "2048552677433643427", "username": "sama", "text": "Our Principles:\n\nDemocratization, Empowerment, Universal Prosperity, Resilience, and Adaptability\n\nhttps://t.co/g58WGndARw", "created_at": "Sun Apr 26 23:59:53 +0000 2026", "score": 6.5, "category": "other", "hook": "other update", "url": "https://x.com/sama/status/2048552677433643427"}, {"id": "2048554097985593849", "username": "sama", "text": "so fun to see the reception to 5.5!\n\nthere is almost nothing that feels more gratifying to me than builders saying they find our tools useful.", "created_at": "Mon Apr 27 00:05:31 +0000 2026", "score": 6.5, "category": "other", "hook": "other update", "url": "https://x.com/sama/status/2048554097985593849"}, {"id": "2048751392031203544", "username": "sama", "text": "this is so good:\n\nhttps://t.co/GuxDNpsOZi", "created_at": "Mon Apr 27 13:09:30 +0000 2026", "score": 6.5, "category": "other", "hook": "other update", "url": "https://x.com/sama/status/2048751392031203544"}, {"id": "2048428561481265539", "username": "sama", "text": "feels like a good time to seriously rethink how operating systems and user interfaces are designed\n\n(also the internet; there should be a protocol that is equally usable by people and agents)", "created_at": "Sun Apr 26 15:46:41 +0000 2026", "score": 6.5, "category": "other", "hook": "other update", "url": "https://x.com/sama/status/2048428561481265539"}, {"id": "2048427624016572615", "username": "sama", "text": "RT @SebastienBubeck: @NandoDF @sama @gabeeegoooh That's exactly my view too, roughly compresses 2 weeks of our previous jobs to 1 day", "created_at": "Sun Apr 26 15:42:58 +0000 2026", "score": 4.5, "category": "other", "hook": "other update", "url": "https://x.com/sama/status/2048427624016572615"}, {"id": "2048399621492236615", "username": "ylecun", "text": "Shooting oneself in the foot?\nNope.\nShooting oneself in the prefrontal cortex.", "created_at": "Sun Apr 26 13:51:41 +0000 2026", "score": 6.5, "category": "other", "hook": "other update", "url": "https://x.com/ylecun/status/2048399621492236615"}, {"id": "2048399840636248130", "username": "ylecun", "text": "RT @Dan_Jeffries1: Never let critical thinking get in the way of extremist fantasy stories.\n\nIf you're on either side of this slider, congrats.", "created_at": "Sun Apr 26 13:52:34 +0000 2026", "score": 4.5, "category": "other", "hook": "other update", "url": "https://x.com/ylecun/status/2048399840636248130"}, {"id": "2048413779919089857", "username": "ylecun", "text": "RT @internetarchive: When MTV News shut down, it felt like decades of culture vanished overnight 🕰️\n\nBut over 470,000 pages were already pr...", "created_at": "Sun Apr 26 14:47:57 +0000 2026", "score": 6.5, "category": "other", "hook": "other update", "url": "https://x.com/ylecun/status/2048413779919089857"}, {"id": "2048426122854228141", "username": "ylecun", "text": "\"post-AGI, no one is going to work and the economy is going to collapse\"", "created_at": "Sun Apr 26 15:37:00 +0000 2026", "score": 7.5, "category": "other", "hook": "other update", "url": "https://x.com/ylecun/status/2048426122854228141"}, {"id": "2048493255176646834", "username": "ylecun", "text": "RT @Dan_Jeffries1: Existential risk mongers are a small, very vocal cult with a lot of very clever online astroturfing skills.", "created_at": "Sun Apr 26 20:03:45 +0000 2026", "score": 4.5, "category": "other", "hook": "other update", "url": "https://x.com/ylecun/status/2048493255176646834"}, {"id": "2048502978626113625", "username": "DavidSacks", "text": "MSM hoax factories like the Atlantic love to allege conflicts of interest without ever disclosing their own.", "created_at": "Sun Apr 26 20:42:24 +0000 2026", "score": 6.5, "category": "other", "hook": "other update", "url": "https://x.com/DavidSacks/status/2048502978626113625"}, {"id": "2048501475794440691", "username": "rektcapital", "text": "RT @rektcapital: #BTC \n\nBitcoin continues to resist from the 21-week EMA (green)\n\nUnless BTC is able to reclaim the 21-week EMA as support.", "created_at": "Sun Apr 26 20:36:25 +0000 2026", "score": 6.0, "category": "bitcoin", "hook": "bitcoin signal", "url": "https://x.com/rektcapital/status/2048501475794440691"}, {"id": "2048501918314684861", "username": "Tradermayne", "text": "RT @OrderBookShow: Loma breaks down why betting against the S&P has been a losing game.", "created_at": "Sun Apr 26 20:38:11 +0000 2026", "score": 4.5, "category": "other", "hook": "other update", "url": "https://x.com/Tradermayne/status/2048501918314684861"}, {"id": "2048464318925009148", "username": "DavidSacks", "text": "RT @elonmusk: Accurate", "created_at": "Sun Apr 26 18:08:46 +0000 2026", "score": 6.0, "category": "other", "hook": "other update", "url": "https://x.com/DavidSacks/status/2048464318925009148"}, {"id": "2048461672533373184", "username": "Tradermayne", "text": "Isn't living in Manitoba punishment enough!", "created_at": "Sun Apr 26 17:58:15 +0000 2026", "score": 6.0, "category": "other", "hook": "other update", "url": "https://x.com/Tradermayne/status/2048461672533373184"}, {"id": "2048452211751981409", "username": "DavidSacks", "text": "RT @AndrewKolvet: Cole Allen, the gunman from last night's WH Correspondents Dinner, maintained an active online presence, especially on th...", "created_at": "Sun Apr 26 17:20:40 +0000 2026", "score": 6.0, "category": "other", "hook": "other update", "url": "https://x.com/DavidSacks/status/2048452211751981409"}, {"id": "2048232566612799892", "username": "ylecun", "text": "RT @ihtesham2005: A mathematician who shared an office with Claude Shannon at Bell Labs gave one lecture in 1986 that explains why some peo...", "created_at": "Sun Apr 26 02:47:52 +0000 2026", "score": 6.0, "category": "other", "hook": "other update", "url": "https://x.com/ylecun/status/2048232566612799892"}, {"id": "2048218361109102633", "username": "ylecun", "text": "RT @PhillyInquirer: OPINION: \"Trump's mismanagement has resulted in death, destruction, wasted tax dollars, and a huge loss in respect for...", "created_at": "Sun Apr 26 01:51:26 +0000 2026", "score": 6.0, "category": "other", "hook": "other update", "url": "https://x.com/ylecun/status/2048218361109102633"}, {"id": "2048535320472199501", "username": "ylecun", "text": "RT @briantylercohen: Republicans have been making this argument my entire life. We had 8 years of Clinton, 8 years of Obama, 4 years of Bid...", "created_at": "Sun Apr 26 22:50:55 +0000 2026", "score": 6.0, "category": "other", "hook": "other update", "url": "https://x.com/ylecun/status/2048535320472199501"}, {"id": "2048534721848848454", "username": "ylecun", "text": "Going to be live with @buyerofponzi shortly for another episode of the Crypto Closeout.", "created_at": "Sun Apr 26 22:48:32 +0000 2026", "score": 7.0, "category": "alpha", "hook": "alpha signal", "url": "https://x.com/ylecun/status/2048534721848848454"}, {"id": "2048543369786171686", "username": "ylecun", "text": "RT @Gianl1974: Trump just fired all 24 members of the National Science Board. Every single one. By email. No warning. No reason given. The…", "created_at": "Sun Apr 26 23:22:54 +0000 2026", "score": 6.5, "category": "other", "hook": "other update", "url": "https://x.com/ylecun/status/2048543369786171686"}, {"id": "2048910739784826966", "username": "sama", "text": "we love our users", "created_at": "Mon Apr 27 23:42:41 +0000 2026", "score": 6.5, "category": "other", "hook": "other update", "url": "https://x.com/sama/status/2048910739784826966"}, {"id": "2048899273161326869", "username": "ylecun", "text": "RT @Microinteracti1: Trump has spent the better years of his second term treating allied governments like freeloading tenants who should be…", "created_at": "Mon Apr 27 22:57:08 +0000 2026", "score": 6.5, "category": "other", "hook": "other update", "url": "https://x.com/ylecun/status/2048899273161326869"}, {"id": "2048898843950071963", "username": "Tradermayne", "text": "RT @Tradermayne: Ya fuck you dude.", "created_at": "Mon Apr 27 22:55:25 +0000 2026", "score": 6.5, "category": "other", "hook": "other update", "url": "https://x.com/Tradermayne/status/2048898843950071963"}, {"id": "2048893555272560789", "username": "BitcoinMagazine", "text": "RT @TheBitcoinConf: MICHAEL SAYLOR TAKES THE STAGE IN THE ENTERPRISE HALL 🚀\n\nLEGEND! https://t.co/SV6KAugfS3", "created_at": "Mon Apr 27 22:34:24 +0000 2026", "score": 6.5, "category": "bitcoin", "hook": "bitcoin signal", "url": "https://x.com/BitcoinMagazine/status/2048893555272560789"}, {"id": "2048892596119089241", "username": "Tradermayne", "text": "RT @OrderBookShow: Loma outlines a reason why $BTC may not make new lows.\n\n\"Because we had the war, realistically, I think that's a, that's…", "created_at": "Mon Apr 27 22:30:36 +0000 2026", "score": 6.5, "category": "other", "hook": "Price signal", "url": "https://x.com/Tradermayne/status/2048892596119089241"}, {"id": "2048913443714179510", "username": "Tradermayne", "text": "They are going to release this to the public and all the racist memes you send your friends on Instagram are instantly getting put on blast.", "created_at": "Mon Apr 27 23:53:26 +0000 2026", "score": 6.0, "category": "other", "hook": "New launch", "url": "https://x.com/Tradermayne/status/2048913443714179510"}, {"id": "2048907996240261442", "username": "BitcoinMagazine", "text": "WATCH: Billionaire Tim Draper takes the stage at Bitcoin 2026 in Las Vegas 🇺🇸\n\nhttps://t.co/o7Lwg2jtxr", "created_at": "Mon Apr 27 23:31:47 +0000 2026", "score": 6.0, "category": "bitcoin", "hook": "Bitcoin update", "url": "https://x.com/BitcoinMagazine/status/2048907996240261442"}, {"id": "2048884884291330251", "username": "Tradermayne", "text": "Third video of the Whiteboard Series is up! \n\nThis episode is about all things liquidity. \n\nLikes and RTs are appreciated.\n\nhttps://t.co/U0Fbk8wfPH", "created_at": "Mon Apr 27 21:59:57 +0000 2026", "score": 6.0, "category": "alpha", "hook": "alpha signal", "url": "https://x.com/Tradermayne/status/2048884884291330251"}, {"id": "2048875708165116195", "username": "SolanaFloor", "text": "JUST IN: @patrickjwitt , Executive Director of the 🇺🇸President's Council of Advisors for Digital Assets, says the White House will make a \"big announcement\" on the Strategic Bitcoin Reserve in the next few weeks, adding, \"I think we have a bit of a breakthrough there.\" https://t.co/vRK0dmORTg", "created_at": "Mon Apr 27 21:23:29 +0000 2026", "score": 6.0, "category": "bitcoin", "hook": "Bitcoin update", "url": "https://x.com/SolanaFloor/status/2048875708165116195"}, {"id": "2048846850346897814", "username": "Tradermayne", "text": "RT @TheOBAfterDark: 🚨 Popular streamer Tradermayne shares his Coin Flip strategy and how to maximize your profits https://t.co/Wd5jz2USHq", "created_at": "Mon Apr 27 19:28:49 +0000 2026", "score": 6.0, "category": "alpha", "hook": "alpha signal", "url": "https://x.com/Tradermayne/status/2048846850346897814"}, {"id": "2048813533136060459", "username": "DavidSacks", "text": "https://t.co/VdDMW3Bt73", "created_at": "Mon Apr 27 17:16:26 +0000 2026", "score": 6.0, "category": "other", "hook": "other update", "url": "https://x.com/DavidSacks/status/2048813533136060459"}, {"id": "2048786646389117367", "username": "coingecko", "text": "gm fam 🦎", "created_at": "Mon Apr 27 15:29:35 +0000 2026", "score": 6.0, "category": "other", "hook": "other update", "url": "https://x.com/coingecko/status/2048786646389117367"}, {"id": "2048879868763386185", "username": "coingecko", "text": "Ticker to close out April?", "created_at": "Mon Apr 27 21:40:01 +0000 2026", "score": 5.5, "category": "other", "hook": "other update", "url": "https://x.com/coingecko/status/2048879868763386185"}, {"id": "2048842124578394443", "username": "SolanaFloor", "text": "NEWS: 🇺🇸 Senator Cynthia Lummis said the CLARITY Act will be marked up \"in May,\" moving U.S. crypto market structure legislation closer to formal advancement in Congress as lawmakers aim to 'get it to the finish line.'\n\n https://t.co/z88C6RrVxp", "created_at": "Mon Apr 27 19:10:02 +0000 2026", "score": 5.5, "category": "bitcoin", "hook": "Bitcoin update", "url": "https://x.com/SolanaFloor/status/2048842124578394443"}, {"id": "2048577258508460151", "username": "Tradermayne", "text": "https://t.co/bhBC6dmwIP", "created_at": "Mon Apr 27 01:37:33 +0000 2026", "score": 5.5, "category": "other", "hook": "other update", "url": "https://x.com/Tradermayne/status/2048577258508460151"}, {"id": "2048573807204663375", "username": "Tradermayne", "text": "Last day to use code MAYNE for  a 10% discount on your Breakout evaluation.", "created_at": "Mon Apr 27 01:23:50 +0000 2026", "score": 5.5, "category": "other", "hook": "other update", "url": "https://x.com/Tradermayne/status/2048573807204663375"}, {"id": "2048917940884652413", "username": "Tradermayne", "text": "RT @Tradermayne: Third video of the Whiteboard Series is up! \n\nThis episode is about all things liquidity. \n\nLikes and RTs are appreciated.", "created_at": "Tue Apr 28 00:11:18 +0000 2026", "score": 5.5, "category": "other", "hook": "other update", "url": "https://x.com/Tradermayne/status/2048917940884652413"}, {"id": "2048895140299690371", "username": "ylecun", "text": "RT @AndrewCMyers: By canning the National Science Board with no stated justification, the administration continues the destruction of this…", "created_at": "Mon Apr 27 22:40:42 +0000 2026", "score": 5.5, "category": "other", "hook": "other update", "url": "https://x.com/ylecun/status/2048895140299690371"}, {"id": "2048883193789452292", "username": "DefiLlama", "text": "RT @0xngmi: We are now hiring new developers at DefiLlama!\n\n- High impact & ownership\n- No meetings, everything is async\n\nDevs that joined…", "created_at": "Mon Apr 27 21:53:14 +0000 2026", "score": 5.5, "category": "other", "hook": "New launch", "url": "https://x.com/DefiLlama/status/2048883193789452292"}, {"id": "2048573807204663375", "username": "Tradermayne", "text": "Last day to use code MAYNE for  a 10% discount on your Breakout evaluation.", "created_at": "Mon Apr 27 01:23:50 +0000 2026", "score": 5.5, "category": "other", "hook": "other update", "url": "https://x.com/Tradermayne/status/2048573807204663375"}, {"id": "2048497602250015010", "username": "coingecko", "text": "RT @TrycVerrse: ➥ I've been thinking and wondering how most people stare at charts all day but still don't really know what's driving their…", "created_at": "Sun Apr 26 20:21:02 +0000 2026", "score": 5.0, "category": "other", "hook": "other update", "url": "https://x.com/coingecko/status/2048497602250015010"}, {"id": "2048907125536219239", "username": "Tradermayne", "text": "RT @breakoutprop: The number one cause of failing your eval? Overtrading.\n\nYou don't need 50 trades. You need the right trades.\n\nRisk 1% pe…", "created_at": "Mon Apr 27 23:28:20 +0000 2026", "score": 5.0, "category": "other", "hook": "other update", "url": "https://x.com/Tradermayne/status/2048907125536219239"}, {"id": "2048856687399039405", "username": "SolanaFloor", "text": "Source: https://t.co/334ozd2O9w", "created_at": "Mon Apr 27 20:07:54 +0000 2026", "score": 5.0, "category": "other", "hook": "other update", "url": "https://x.com/SolanaFloor/status/2048856687399039405"}, {"id": "2048855018288349457", "username": "SolanaFloor", "text": "Full episode 👉 https://t.co/wKIF5AmAHN", "created_at": "Mon Apr 27 20:01:16 +0000 2026", "score": 5.0, "category": "other", "hook": "other update", "url": "https://x.com/SolanaFloor/status/2048855018288349457"}, {"id": "2048850504860758206", "username": "coingecko", "text": "RT @RickLFG: When we look at the market, we usually only see prices going up or down but many of us struggle to understand why they are mov…", "created_at": "Mon Apr 27 19:43:20 +0000 2026", "score": 5.0, "category": "other", "hook": "Security alert", "url": "https://x.com/coingecko/status/2048850504860758206"}, {"id": "2048839944270184601", "username": "Tradermayne", "text": "RT @Tradermayne: ethereum:native https://t.co/GQShQLCn2N", "created_at": "Mon Apr 27 19:01:22 +0000 2026", "score": 5.0, "category": "other", "hook": "other update", "url": "https://x.com/Tradermayne/status/2048839944270184601"}, {"id": "2048827308451168402", "username": "SolanaFloor", "text": "Source A: https://t.co/z3zCfUPfTS\nSource B: https://t.co/DN3ExHGO5J", "created_at": "Mon Apr 27 18:11:10 +0000 2026", "score": 5.0, "category": "other", "hook": "other update", "url": "https://x.com/SolanaFloor/status/2048827308451168402"}, {"id": "2048824968138338611", "username": "ylecun", "text": "RT @Zweistein2stein: @Gianl1974 https://t.co/m5p5VfqeKr", "created_at": "Mon Apr 27 18:01:52 +0000 2026", "score": 5.0, "category": "other", "hook": "other update", "url": "https://x.com/ylecun/status/2048824968138338611"}, {"id": "2048821958087717011", "username": "ylecun", "text": "RT @Dan_Jeffries1: AI has had one safest technology roll-outs in history.\n\nRead that again, because it's a fact. \n\nIt's used by billions wi…", "created_at": "Mon Apr 27 17:49:54 +0000 2026", "score": 5.0, "category": "other", "hook": "other update", "url": "https://x.com/ylecun/status/2048821958087717011"}, {"id": "2048815122789892245", "username": "jump_", "text": "RT @jump_firedancer: Quantum is still many years away, and if and when it materializes, the work to migrate @solana is well-researched, und…", "created_at": "Mon Apr 27 17:22:45 +0000 2026", "score": 5.0, "category": "solana", "hook": "Solana alpha", "url": "https://x.com/jump_/status/2048815122789892245"}, {"id": "2048783828559265823", "username": "SolanaFloor", "text": "Source: https://t.co/ijY2ksacgq", "created_at": "Mon Apr 27 15:18:23 +0000 2026", "score": 5.0, "category": "other", "hook": "other update", "url": "https://x.com/SolanaFloor/status/2048783828559265823"}, {"id": "2048783191738126502", "username": "Uniswap", "text": "RT @UniswapBuilders: > Browse Uniswap Skills for your agent\n\n> Drop them into your favorite LLM https://t.co/N1NDCajAiq", "created_at": "Mon Apr 27 15:15:52 +0000 2026", "score": 5.0, "category": "other", "hook": "other update", "url": "https://x.com/Uniswap/status/2048783191738126502"}, {"id": "2048779384132399466", "username": "SolanaFloor", "text": "Full episode 👉 https://t.co/oawBKxwB1D", "created_at": "Mon Apr 27 15:00:44 +0000 2026", "score": 5.0, "category": "other", "hook": "other update", "url": "https://x.com/SolanaFloor/status/2048779384132399466"}, {"id": "2048662870280622314", "username": "coingecko", "text": "View chart:\nhttps://t.co/G1b0jmy5sX", "created_at": "Mon Apr 27 07:17:45 +0000 2026", "score": 5.0, "category": "other", "hook": "other update", "url": "https://x.com/coingecko/status/2048662870280622314"}, {"id": "2048605376892043352", "username": "Tradermayne", "text": "RT @Tradermayne: Last day to use code MAYNE for  a 10% discount on your Breakout evaluation.", "created_at": "Mon Apr 27 03:29:17 +0000 2026", "score": 5.0, "category": "other", "hook": "other update", "url": "https://x.com/Tradermayne/status/2048605376892043352"}, {"id": "2048596666891329801", "username": "coingecko", "text": "RT @kasplex: We're thrilled to announce that @kasplex is listed on @coingecko! 🚀\n\nFounded in 2014, CoinGecko is the world's leading crypto…", "created_at": "Mon Apr 27 02:54:41 +0000 2026", "score": 5.0, "category": "other", "hook": "other update", "url": "https://x.com/coingecko/status/2048596666891329801"}, {"id": "2048830247559426489", "username": "Tradermayne", "text": "RT @breakoutprop: Hot take that's not actually a hot take:\n\nAccess to capital beats keeping 100% of your profits.\n\n5K personal account. 5%…", "created_at": "Mon Apr 27 18:22:51 +0000 2026", "score": 4.5, "category": "other", "hook": "other update", "url": "https://x.com/Tradermayne/status/2048830247559426489"}, {"id": "2048825591273541979", "username": "ylecun", "text": "RT @Ph_Aghion: 👉 Sur l'#IA, mon optimisme est prudent. Je reconnais les dangers de cette technologie, mais si on en freinait le développeme…", "created_at": "Mon Apr 27 18:04:20 +0000 2026", "score": 4.5, "category": "other", "hook": "other update", "url": "https://x.com/ylecun/status/2048825591273541979"}, {"id": "2048799171847881025", "username": "Tradermayne", "text": "RT @OrderBookShow: Loma highlights the exhaustion from nonstop geopolitical swings.\n\n\"Like you go to sleep, we're in war. You wake up, ther…", "created_at": "Mon Apr 27 16:19:22 +0000 2026", "score": 4.5, "category": "other", "hook": "other update", "url": "https://x.com/Tradermayne/status/2048799171847881025"}, {"id": "2048920851450609666", "username": "BitcoinMagazine", "text": "RT @BitcoinMagazine: JUST IN: Billionaire Tim Draper says it's now irresponsible for companies to not hold bitcoin.\n\n\"Because when Silicon…", "created_at": "Tue Apr 28 00:22:52 +0000 2026", "score": 6.0, "category": "bitcoin", "hook": "bitcoin signal", "url": "https://x.com/BitcoinMagazine/status/2048920851450609666"}];
         
-        const contentDiv = document.getElementById('content');
+        let currentFilter = 'all';
         
-        tweets.forEach(tweet => {
-            const catClass = 'category-' + tweet.category;
+        function renderTweets(filter = 'all') {
+            const container = document.getElementById('tweets');
+            const filtered = filter === 'all' ? ALL_TWEETS : ALL_TWEETS.filter(t => t.category === filter);
             
-            contentDiv.innerHTML += `
-                <div class="video-card">
-                    <div class="video-header">
-                        <div class="video-rank">#${tweet.rank}</div>
-                        <div class="video-meta">
-                            <div class="video-score">${tweet.score}/10</div>
-                            <span class="video-category ${catClass}">${tweet.category.toUpperCase()}</span>
+            document.getElementById('total-tweets').textContent = filtered.length;
+            
+            container.innerHTML = filtered.map((tweet, i) => {
+                const catClass = 'category-' + tweet.category;
+                const text = tweet.text.replace(/\n/g, '<br>').substring(0, 200);
+                
+                return `
+                    <div class="tweet-card">
+                        <div class="tweet-rank">#${i + 1}</div>
+                        <div class="tweet-content">
+                            <div class="tweet-header">
+                                <span class="tweet-user">@${tweet.username}</span>
+                                <div class="tweet-meta">
+                                    <span class="tweet-score">${tweet.score}/10</span>
+                                    <span class="tweet-category ${catClass}">${tweet.category}</span>
+                                </div>
+                            </div>
+                            <div class="tweet-text">${text}${tweet.text.length > 200 ? '...' : ''}</div>
+                            <div class="tweet-time">${tweet.created_at}</div>
+                            <div class="tweet-actions">
+                                <a href="${tweet.url}" target="_blank" class="btn btn-primary">View Tweet</a>
+                            </div>
                         </div>
                     </div>
-                    
-                    <div class="hook-box">
-                        <div class="label">🎤 HOOK (Say This First)</div>
-                        ${tweet.hook}
-                    </div>
-                    
-                    <div class="context-box">
-                        <div class="label">📝 WHAT TO SAY</div>
-                        ${tweet.context}
-                    </div>
-                    
-                    <div class="tweet-text">
-                        "${tweet.text}"
-                    </div>
-                    
-                    <div class="actions">
-                        <a href="${tweet.url}" target="_blank" class="btn btn-primary">
-                            👁️ View Original Tweet
-                        </a>
-                        <span class="btn btn-secondary" style="cursor:default;">
-                            📋 Copy Script
-                        </span>
-                    </div>
-                </div>
-            `;
+                `;
+            }).join('');
+        }
+        
+        // Tab switching
+        document.querySelectorAll('.tab').forEach(tab => {
+            tab.addEventListener('click', () => {
+                document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+                tab.classList.add('active');
+                currentFilter = tab.dataset.filter;
+                renderTweets(currentFilter);
+            });
         });
+        
+        // Initial render
+        renderTweets();
     </script>
 </body>
 </html>
